@@ -1,0 +1,32 @@
+[tool.briefcase]
+project_name = "HelloBee"
+bundle = "com.example.hellobee"
+version = "0.0.1"
+url = "https://example.com/hellobee"
+license = "MIT"
+author = "Your Name"
+author_email = "you@example.com"
+description = "A cross-platform BeeWare demo."
+long_description = "A simple app built with BeeWare that runs on multiple platforms."
+class_name = "HelloBeeApp"
+app_name = "hellobee"
+
+[tool.briefcase.app.hellobee]
+formal_name = "Hello BeeWare"
+description = "A cross-platform BeeWare demo."
+sources = ["src/hellobee"]
+
+[tool.briefcase.app.hellobee.macOS]
+requires = ["toga-cocoa>=0.3.0.dev33"]
+
+[tool.briefcase.app.hellobee.linux]
+requires = ["toga-gtk>=0.3.0.dev33"]
+
+[tool.briefcase.app.hellobee.windows]
+requires = ["toga-winforms>=0.3.0.dev33"]
+
+[tool.briefcase.app.hellobee.iOS]
+requires = ["toga-iOS>=0.3.0.dev33"]
+
+[tool.briefcase.app.hellobee.android]
+requires = ["toga-android>=0.3.0.dev33"]
